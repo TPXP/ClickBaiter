@@ -42,8 +42,8 @@ function checkForStupidClickBait() {
 
 var addClickBaitWarning = function (currentArticle) {
   if (option !== 'flag') {
-    var articleContainer = $(currentArticle).closest('._4-u2');
-    articleContainer.remove();
+    var articleContainer = currentArticle.closest('._4-u2');
+    articleContainer.parentNode.removeChild(element);
     return;
   }
 
@@ -66,8 +66,8 @@ var addClickBaitWarning = function (currentArticle) {
 
   currentArticle.appendChild(warning);
 
-  var articleContainer = $(currentArticle).closest('.mtm');
-  articleContainer.addClass('clickBaitArticle');
+  var articleContainer = currentArticle.closest('.mtm');
+  articleContainer.classList.add('clickBaitArticle');
 }
 
 var markArticleAsSafe = function (currentArticle) {

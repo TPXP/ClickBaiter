@@ -1,7 +1,7 @@
 {
   "title": "ClickBait Detector",
   "name": "clickbaiter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A firefox extension that warns you of clickbait on facebook",
   "main": "index.js",
   "author": "Jerome Duncan",
