@@ -1,0 +1,16 @@
+{
+  "title": "ClickBait Detector",
+  "name": "clickbaiter",
+  "version": "0.0.1",
+  "description": "A firefox extension that warns you of clickbait on facebook",
+  "main": "index.js",
+  "author": "Jerome Duncan",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
