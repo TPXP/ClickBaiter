@@ -14,3 +14,8 @@ var saveData = function () {
 }
 
 button.addEventListener('click', saveData);
+self.port.emit('loaded', null);
+
+self.port.on('val_back', function (value) {
+  $('#' + value).attr('checked', 'true');
+})

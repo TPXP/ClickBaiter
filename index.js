@@ -39,8 +39,8 @@ var button = buttons.ToggleButton({
   label: "ClickBaiter",
   icon: {
     "16": "./icon-16.png",
-    "32": "./icon-32.png",
-    "64": "./icon-64.png"
+    "32": "./icon-16.png",
+    "64": "./icon-16.png"
   },
   onChange: handleChange
 });
@@ -53,7 +53,7 @@ var panel = panels.Panel({
   onHide: handleHide,
   width: 310,
   height: 320,
-  contentStyleFile: data.url('main.css'),
+  contentStyleFile: data.url('popup.css'),
   contentScriptFile: [data.url('jquery.js'), data.url('savey.js')]
 });
 
@@ -84,4 +84,9 @@ panel.port.on('saved', function (val) {
   if (integrated) {
     integrated.port.emit('options_updated', val);
   }
+});
+
+panel.port.on('loaded', function (val) {
+  var val = ss.storage.action ? ss.storage.action : 'remove';
+  panel.port.emit('val_back', val);
 });
